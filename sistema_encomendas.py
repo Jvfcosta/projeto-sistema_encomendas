@@ -17,12 +17,13 @@ estoque = [15, 20, 15, 30,35, 28, 25, 15, 17,
            30, 10, 15, 5, 7, 5]
 
 #    1.1. Exibir lista de produtos disponíveis 
-print("LISTA DE PRODUTOS".center(100))
-print()
-for i in range(len(produtos)):
-    print(f'\n{i+1}. {produtos[i]:.<42}  Categoria: {categorias[i]:.<12} R$ {precos[i]:.2f} ... Unidades: {estoque[i]}')
-print()
+print(f'-'*99)
+print(f"     {'=' * 30} <<< \033[1;4;42m LISTA DE PRODUTOS \033[m>>>  {'=' * 30} ")
+print(f'-'*99)
 
+for i in range(len(produtos)):
+    print(f'\n{i+1}. {produtos[i]:.<42}  Categoria: {categorias[i]:.<12} R$ {precos[i]:.2f} ... Unidades: {estoque[i]}'.center(5))
+print()
 #    1.3. Criar dicionário vazio para armazenar encomendas dos clientes -
 encomendas = {}
 while True:
@@ -55,7 +56,7 @@ if menu_opcao <= len(produtos):
     #    3.3. Verificar se há estoque suficiente
     while True:
         if quant_estoque > 0 and quant_estoque >= quant_produto:
-            print("Você adicionou:")
+            print("\033[1;34m Você adicionou: \033[m")
             # Mostar a compra e adicionar na variável encomendas
             print(f'\t Produto: {produto_selecionado}') # Mostrar o produto selecionado
             encomendas[cliente].append(produto_selecionado) # Adicionar o produto na lista de encomendas
@@ -72,7 +73,7 @@ if menu_opcao <= len(produtos):
             encomendas[cliente].append(f'{total_produto:.2f}') # Adicionar o total da compra na lista
             break
         else:
-            print(f'Quantidade insuficiente. Estoque: {quant_estoque} \n')
+            print(f'\033[1;31m Quantidade insuficiente. Estoque: {quant_estoque} \033[m\n')
     
             continuar = input('Deseja comprar este produto [S/N]: ').upper()
             
