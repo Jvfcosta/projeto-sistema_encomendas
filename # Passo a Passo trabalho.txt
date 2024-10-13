@@ -1,0 +1,46 @@
+# Passo a Passo: Sistema de Encomendas
+# 1. Configuração Inicial --- OK
+#    1.1. Criar lista de produtos - ok
+#    1.1. Exibir lista de produtos disponíveis - OK
+#    1.3. Criar dicionário vazio para armazenar encomendas dos clientes - OK
+
+# 2. Verificar se o cliente existe --- OK
+#    2.1. Input para inserir o nome do cliente - OK
+#    2.1. Verificar se o cliente ja existe - OK
+#    2.2. Criar lista vazia para os produtos do cliente atual  - OK
+
+# 3. Seleção de Produtos
+   # 3.1. Input para o cliente selecionar um produto - OK
+   # 3.2. Input para a quantidade desejada do produto - OK
+   # 3.3. Verificar se há estoque suficiente - OK
+   # 3.4. Se houver estoque, adicionar produto à lista de produtos do cliente - OK
+   
+   3.5. Atualizar o estoque do produto
+
+4. Gerenciamento do Carrinho  
+   # 4.1. Adicionar a lista de produtos selecionados ao dicionário de encomendas, usando o nome do cliente como chave -- OK
+   
+  4.2. Opção para o cliente adicionar mais produtos ou finalizar a compra
+        loop while
+        condição para encerrar a compra
+
+5. Cálculo e Finalização
+   5.1. Calcular o total da compra
+   5.2. Verificar se o total atinge o valor para desconto
+   5.3. Aplicar desconto, se aplicável
+   5.4. Exibir resumo da compra para o cliente
+
+6. Conclusão da Venda
+   6.1. Finalizar a venda, removendo os produtos do estoque permanentemente
+   6.2. Limpar o carrinho do cliente no dicionário de encomendas
+
+7. Novo Ciclo
+   7.1. Perguntar se há um novo cliente
+   7.2. Se sim, voltar ao passo 2; se não, encerrar o programa
+
+8. Gerenciamento de Estoque
+   8.1. Opção para atualizar quantidades de produtos existentes
+
+# 9. (Opcional) Relatórios
+#    9.1. Gerar relatório de vendas
+#    9.2. Gerar relatório de estoque atual
